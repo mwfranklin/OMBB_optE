@@ -1,0 +1,4 @@
+inputs/1qj8.pdb.gz
+inputs/2erv.pdb.gz
+inputs/3qra.pdb.gz
+inputs/3gp6.pdb.gz

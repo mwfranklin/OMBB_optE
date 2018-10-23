@@ -1,0 +1,18 @@
+# These are the flags that activate the sequence-profile recovery procedure
+# in optE.  Note that the -ex1 and -ex2 flags can be commented out for speed.
+
+-s ../inputs/HighRes_OMBB_inputs.txt.short
+-optE::optimize_nat_aa
+-ignore_unrecognized_res
+-mute all
+-ex1 # comment out this flag to make the demo run more quickly
+-ex2 # comment out this flag to make the demo run more quickly
+-linmem_ig 10
+-optE:weights ../inputs/membrane_highres_Menv_smooth.txt
+-unmute protocols.optimize_weights.IterativeOptEDriver core.pack.min_pack
+-no_optH true
+-skip_set_reasonable_fold_tree
+-mpi_weight_minimization
+-starting_refEs ../inputs/membrane_highres_Menv_smooth.wts
+-optE:no_design_pdb_output
+-optE:constrain_weights ../inputs/SeqRecap.txt
